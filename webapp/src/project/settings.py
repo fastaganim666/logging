@@ -26,12 +26,23 @@ SECRET_KEY = 'django-insecure-#7(h)18grl0gt@-$33lwu-1&2^#4g82x#%*!_i4et=2lakmsga
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
 
 SITE_ID = 1
+
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+ACCOUNT_FORMS = {'signup': 'sign.models.BasicSignupForm'}
 
 
 
@@ -47,6 +58,12 @@ INSTALLED_APPS = [
     'fpages',
     'news',
     'django_filters',
+    'sign',
+    'protect',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 
 ]
 
@@ -77,6 +94,11 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 WSGI_APPLICATION = 'project.wsgi.application'

@@ -12,6 +12,8 @@
 <a href="{{ post.id }}"><h3>{{ post.name | censor }}</h3></a>
 {{ post.text | truncatewords:20 | censor }}
 <br>{{ post.time_add }}
+<br>
+<br>
 {% endfor %}
 
 <br>
