@@ -41,9 +41,27 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_EMAIL_VERIFICATION = ("mandatory")
+
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'fastaganim666'
+EMAIL_HOST_PASSWORD = 'MKXD3(3*W4XdJfJ'  # пароль от почты
+EMAIL_USE_SSL = True
+
 
 ACCOUNT_FORMS = {'signup': 'sign.models.BasicSignupForm'}
 
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER + '@yandex.ru'
+
+SERVER_EMAIL = DEFAULT_FROM_EMAIL
+
+MANAGERS = [('Dsdfsdfsdf gDSSDg', 'fastaganim666@gmail.com')]
+
+APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
+
+APSCHEDULER_RUN_NOW_TIMEOUT = 25
 
 
 INSTALLED_APPS = [
@@ -56,7 +74,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.flatpages',
     'fpages',
-    'news',
     'django_filters',
     'sign',
     'protect',
@@ -64,7 +81,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-
+    'news.apps.NewsConfig',
+    "django_apscheduler",
 ]
 
 MIDDLEWARE = [

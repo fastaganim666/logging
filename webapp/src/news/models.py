@@ -75,7 +75,7 @@ class Post(models.Model):
         self.save()
 
     def preview(self):
-        pass
+        return f'{self.text[0:124]}'
 
     def __str__(self):
         return f'{self.name}'
@@ -108,10 +108,7 @@ class Comment(models.Model):
         return f'{self.text} | {self.user}'
 
 
-class Subscribers(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+class SubscribersCategory(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-
-
-
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
