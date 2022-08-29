@@ -1,11 +1,11 @@
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Post, SubscribersCategory
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, View
+from .models import Post, SubscribersCategory, Author, Category, PostCategory
 from .filters import PostFilter
 from .forms import PostForm, SubscribeForm
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import PermissionRequiredMixin
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 
 
 class PostsList(ListView):
@@ -51,18 +51,36 @@ class PostDetail(DetailView):
     context_object_name = 'post'
 
 
-class PostCreate(PermissionRequiredMixin, CreateView):
-    form_class = PostForm
-    model = Post
-    template_name = 'post_edit.html'
-    permission_required = ('news.add_Post',)
+class PostCreate(PermissionRequiredMixin, View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'post_edit.html', {})
+
+    def post(self, request, *args, **kwargs):
+        author = Author.objects.get(user_id=request.user.id)
+        post = Post(
+            type=request.POST['type'],
+            name=request.POST['name'],
+            text=request.POST['text'],
+            author_id=author.id,
+        )
+        post.save()
+        print(post.id)
+
+        category = PostCategory(
+            category_id=request.POST['select'],
+            post_id=post.id,
+        )
+        category.save()
+        return redirect('/posts/')
+
+    permission_required = ('news.add_post',)
 
 
 class PostUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     form_class = PostForm
     model = Post
-    template_name = 'post_edit.html'
-    permission_required = ('news.change_Post',)
+    template_name = 'post_update.html'
+    permission_required = ('news.change_post',)
 
 
 class PostDelete(DeleteView):

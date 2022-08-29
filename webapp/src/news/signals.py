@@ -1,5 +1,4 @@
 from django.core.mail import mail_managers
-from django.db.models.signals import post_delete
 from .models import Post, PostCategory
 
 from django.db.models import signals
@@ -14,7 +13,7 @@ def notify_managers_appointment(sender, instance, **kwargs):
         message="Пост удален",
     )
     print('пост удален')
-post_delete.connect(notify_managers_appointment, sender=Post)
+signals.post_delete.connect(notify_managers_appointment, sender=Post)
 
 
 
@@ -26,8 +25,18 @@ def printer(sender, instance, created, **kwargs):
         recipient_list=['fastaganim666@gmail.com']
     )
     post_id = instance.id
-    category_id = PostCategory.objects.filter(post_id=10)
-    print(post_id)
-    print(category_id)
+
 
 signals.post_save.connect(receiver=printer, sender=Post)
+
+def printer2(sender, instance, created, **kwargs):
+    send_mail(
+        subject=instance.post_id,
+        message=instance.category_id,
+        from_email='fastaganim666@yandex.ru',
+        recipient_list=['fastaganim666@gmail.com']
+    )
+    print('PostCategory')
+
+
+signals.post_save.connect(receiver=printer2, sender=PostCategory)

@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.views.generic.edit import CreateView
 from .models import BaseRegisterForm
+from news.models import Author
 
 from django.shortcuts import redirect
 from django.contrib.auth.models import Group
@@ -18,4 +19,6 @@ def upgrade_me(request):
     premium_group = Group.objects.get(name='authors')
     if not request.user.groups.filter(name='authors').exists():
         premium_group.user_set.add(user)
+
+    author = Author.objects.create(user_id=user.id)
     return redirect('/')

@@ -3,9 +3,30 @@
 {% block content %}
 <h1>Пост</h1>
 <hr>
-<form action="" method="post">
+<form action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.as_p }}
+    <label for="name">Название</label>
+    <input type="text" name="name"><br><br>
+    <label for="text">Текст</label>
+    <input type="text" name="text"><br><br>
+
+       <select size="3" name="type">
+    <option disabled>Выберите тип</option>
+    <option value="AT">Статья</option>
+    <option selected value="NS">Новость</option>
+   </select><br><br>
+
+    <p><select multiple name="select" multiple>
+
+    <option selected value="1">Разное</option>
+        <option selected value="2">Политика</option>
+        <option selected value="3">Экономика</option>
+        <option selected value="4">Росиия</option>
+        <option selected value="5">Мир</option>
+
+   </select></p>
+
+
     <input type="submit" value="Save" />
 </form>
 {% endblock content %}
