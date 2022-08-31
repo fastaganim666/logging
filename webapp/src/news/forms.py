@@ -10,7 +10,7 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ['name', 'text', 'categories', 'author', 'type']
+        fields = ['name', 'text', 'categories', 'type']
 
         def clean(self):
             cleaned_data = super().clean()
@@ -21,6 +21,7 @@ class PostForm(forms.ModelForm):
                    "Описание не должно быть идентично названию."
                 )
             return cleaned_data
+        
 
 
 class SubscribeForm(forms.ModelForm):

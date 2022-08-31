@@ -1,10 +1,9 @@
 from django.core.mail import mail_managers
-from .models import Post, PostCategory
+from .models import Post, PostCategory, SubscribersCategory
 
 from django.db.models import signals
 from django.core.mail import send_mail
-
-
+from django.contrib.auth.models import User
 
 
 def notify_managers_appointment(sender, instance, **kwargs):
@@ -13,28 +12,29 @@ def notify_managers_appointment(sender, instance, **kwargs):
         message="Пост удален",
     )
     print('пост удален')
+
+
 signals.post_delete.connect(notify_managers_appointment, sender=Post)
 
 
-
-def printer(sender, instance, created, **kwargs):
-    send_mail(
-        subject=instance.name,
-        message=instance.text,
-        from_email='fastaganim666@yandex.ru',
-        recipient_list=['fastaganim666@gmail.com']
-    )
-    post_id = instance.id
-
-
-signals.post_save.connect(receiver=printer, sender=Post)
-
 def printer2(sender, instance, created, **kwargs):
+    post_id = instance.post_id
+    category_id = instance.category_id
+    user_id = SubscribersCategory.objects.filter(category_id=category_id)
+    user_id = list(user_id.values('user_id'))
+    emails = []
+    for user in user_id:
+        email = User.objects.get(id=user['user_id']).email
+        emails.append(email)
+    print(emails)
+
+    post = Post.objects.get(id=post_id)
+
     send_mail(
-        subject=instance.post_id,
-        message=instance.category_id,
+        subject=post.name,
+        message=post.text,
         from_email='fastaganim666@yandex.ru',
-        recipient_list=['fastaganim666@gmail.com']
+        recipient_list=emails
     )
     print('PostCategory')
 

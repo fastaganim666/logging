@@ -83,6 +83,7 @@ class PostUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     permission_required = ('news.change_post',)
 
 
+
 class PostDelete(DeleteView):
     model = Post
     template_name = 'post_delete.html'
