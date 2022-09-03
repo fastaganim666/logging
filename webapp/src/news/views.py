@@ -7,6 +7,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.shortcuts import redirect, render
 
+from django.http import HttpResponse
+from .tasks import hello, printer
+
 
 class PostsList(ListView):
     model = Post
@@ -103,3 +106,10 @@ class PostSubscribe(LoginRequiredMixin, CreateView):
         subscribe.save()
 
         return redirect('/posts/')
+
+
+class CView(View):
+    def get(self, request):
+        printer.delay(3)
+        hello.delay()
+        return HttpResponse('Hello!')

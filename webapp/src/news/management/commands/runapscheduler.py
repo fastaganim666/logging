@@ -27,8 +27,10 @@ week = date.strftime("%V")
 year, week, _ = now().isocalendar()
 
 
+
 def my_job():
-    posts = Post.objects.filter(time_add__week=week)
+    last_week = week - 1
+    posts = Post.objects.filter(time_add__week=last_week)
     cats = [] # {1, 5}
     posts_list = [] # [107, 108, 109, 110, 111]
     for post in posts:
@@ -47,7 +49,6 @@ def my_job():
         for post_id in posts_list:
             if PostCategory.objects.filter(post_id=post_id, category_id=key).exists():
                 dict_cats[key] = dict_cats.get(key, []) + [post_id]
-
 
     all_users = SubscribersCategory.objects.all()
 
@@ -101,7 +102,7 @@ class Command(BaseCommand):
         scheduler.add_job(
             my_job,
             trigger=CronTrigger(
-                day_of_week="sun", hour="22", minute="00"
+                day_of_week="mon", hour="00", minute="00"
             ),
             id="my_job",  # The `id` assigned to each job MUST be unique
             max_instances=1,
@@ -110,10 +111,9 @@ class Command(BaseCommand):
         logger.info("Added job 'my_job'.")
 
         scheduler.add_job(
-            delete_old_job_executions,
             trigger=CronTrigger(
                 day_of_week="mon", hour="00", minute="00"
-            ),  # Midnight on Monday, before start of the next work week.
+            ),
             id="delete_old_job_executions",
             max_instances=1,
             replace_existing=True,

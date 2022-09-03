@@ -51,6 +51,9 @@ EMAIL_HOST_PASSWORD = 'MKXD3(3*W4XdJfJ'  # пароль от почты
 EMAIL_USE_SSL = True
 
 
+CELERY_BROKER_URL = 'redis://redis:6379'
+
+
 ACCOUNT_FORMS = {'signup': 'sign.models.BasicSignupForm'}
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER + '@yandex.ru'
