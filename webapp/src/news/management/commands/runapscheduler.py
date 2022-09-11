@@ -85,7 +85,6 @@ def delete_old_job_executions(max_age=604_800):
     This job deletes APScheduler job execution entries older than `max_age` from the database.
     It helps to prevent the database from filling up with old historical records that are no
     longer useful.
-
     :param max_age: The maximum length of time to retain historical job execution records.
                     Defaults to 7 days.
     """
@@ -111,6 +110,7 @@ class Command(BaseCommand):
         logger.info("Added job 'my_job'.")
 
         scheduler.add_job(
+            delete_old_job_executions,
             trigger=CronTrigger(
                 day_of_week="mon", hour="00", minute="00"
             ),
