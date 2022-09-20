@@ -6,9 +6,13 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.shortcuts import redirect, render
+import logging
 
 from django.http import HttpResponse
 from .tasks import hello, printer
+
+logger = logging.getLogger('django')
+
 
 
 class PostsList(ListView):
@@ -112,4 +116,13 @@ class CView(View):
     def get(self, request):
         printer.delay(3)
         hello.delay()
+        logger.info('hel')
+        return HttpResponse('Hello!')
+
+
+class CeView(View):
+    def get(self, request):
+        logger.info('hel')
+        logger.warning('helllll')
+        logger.error('helllll000000000')
         return HttpResponse('Hello!')

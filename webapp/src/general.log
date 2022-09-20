@@ -1,0 +1,153 @@
+2022-09-19 15:09:28,699 - INFO - helclass
+2022-09-19 15:10:38,532 - INFO - helclass
+2022-09-19 15:10:57,493 - INFO - helclass
+2022-09-19 15:10:59,624 - INFO - hel
+2022-09-19 15:10:59,625 - WARNING - helllll
+2022-09-19 15:10:59,625 - ERROR - helllll000000000
+2022-09-19 15:11:00,070 - INFO - hel
+2022-09-19 15:11:00,070 - WARNING - helllll
+2022-09-19 15:11:00,071 - ERROR - helllll000000000
+2022-09-19 15:11:00,445 - INFO - hel
+2022-09-19 15:11:00,445 - WARNING - helllll
+2022-09-19 15:11:00,446 - ERROR - helllll000000000
+2022-09-19 15:11:14,789 - INFO - hel
+2022-09-19 15:11:14,789 - WARNING - helllll
+2022-09-19 15:11:14,790 - ERROR - helllll000000000
+2022-09-19 15:11:17,655 - INFO - hel
+2022-09-19 15:11:17,656 - WARNING - helllll
+2022-09-19 15:11:17,656 - ERROR - helllll000000000
+2022-09-19 15:11:18,005 - INFO - hel
+2022-09-19 15:11:18,005 - WARNING - helllll
+2022-09-19 15:11:18,006 - ERROR - helllll000000000
+2022-09-19 15:11:18,340 - INFO - hel
+2022-09-19 15:11:18,340 - WARNING - helllll
+2022-09-19 15:11:18,340 - ERROR - helllll000000000
+2022-09-19 15:12:00,061 - INFO - helclass
+2022-09-19 15:13:01,897 - INFO - helclass - views
+2022-09-19 15:14:10,646 - INFO - helclass - views
+2022-09-19 15:14:12,604 - INFO - hel - views
+2022-09-19 15:14:12,604 - WARNING - helllll - views
+2022-09-19 15:14:12,605 - ERROR - helllll000000000 - views
+2022-09-19 15:14:12,997 - INFO - hel - views
+2022-09-19 15:14:12,997 - WARNING - helllll - views
+2022-09-19 15:14:12,997 - ERROR - helllll000000000 - views
+2022-09-19 15:14:13,321 - INFO - hel - views
+2022-09-19 15:14:13,322 - WARNING - helllll - views
+2022-09-19 15:14:13,322 - ERROR - helllll000000000 - views
+2022-09-19 15:14:46,336 - INFO - helclass - views
+2022-09-19 15:14:48,258 - INFO - hel - views
+2022-09-19 15:14:48,258 - WARNING - helllll - views
+2022-09-19 15:14:48,258 - ERROR - helllll000000000 - views
+2022-09-19 16:41:42,823 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:41:42,823 - INFO - helclass - views
+2022-09-19 16:41:57,888 - INFO - hel - views
+2022-09-19 16:41:57,888 - WARNING - helllll - views
+2022-09-19 16:41:57,888 - ERROR - helllll000000000 - views
+2022-09-19 16:41:57,889 - INFO - "GET /posts/ce/ HTTP/1.1" 200 6 - basehttp
+2022-09-19 16:42:27,193 - INFO - C:\PythonPro\docker-news\webapp\src\news\views.py changed, reloading. - autoreload
+2022-09-19 16:42:27,989 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:42:28,004 - INFO - helclass - views
+2022-09-19 16:42:28,005 - INFO - hel - views
+2022-09-19 16:42:28,005 - WARNING - helllll - views
+2022-09-19 16:42:28,006 - ERROR - helllll000000000 - views
+2022-09-19 16:42:28,254 - INFO - "GET /posts/ HTTP/1.1" 200 6474 - basehttp
+2022-09-19 16:42:28,272 - INFO - "GET /static/css/styles.css HTTP/1.1" 304 0 - basehttp
+2022-09-19 16:42:29,235 - INFO - "GET /posts/111 HTTP/1.1" 200 3393 - basehttp
+2022-09-19 16:42:44,129 - INFO - "GET /posts/111 HTTP/1.1" 200 3393 - basehttp
+2022-09-19 16:42:47,690 - INFO - "GET /posts/111 HTTP/1.1" 200 3393 - basehttp
+2022-09-19 16:42:48,607 - INFO - "GET /posts/111 HTTP/1.1" 200 3393 - basehttp
+2022-09-19 16:42:49,542 - INFO - "GET /posts/111 HTTP/1.1" 200 3393 - basehttp
+2022-09-19 16:42:50,568 - INFO - "GET /posts/111 HTTP/1.1" 200 3393 - basehttp
+2022-09-19 16:42:51,609 - INFO - "GET /posts/111 HTTP/1.1" 200 3393 - basehttp
+2022-09-19 16:43:00,806 - INFO - "GET /posts/ HTTP/1.1" 200 6474 - basehttp
+2022-09-19 16:43:10,990 - INFO - "GET /posts/107 HTTP/1.1" 200 3393 - basehttp
+2022-09-19 16:43:15,371 - INFO - "GET /posts/51 HTTP/1.1" 200 4620 - basehttp
+2022-09-19 16:43:18,475 - INFO - "GET /posts/51 HTTP/1.1" 200 4620 - basehttp
+2022-09-19 16:43:19,170 - INFO - "GET /posts/51 HTTP/1.1" 200 4620 - basehttp
+2022-09-19 16:43:19,859 - INFO - "GET /posts/51 HTTP/1.1" 200 4620 - basehttp
+2022-09-19 16:43:22,292 - INFO - "GET /posts/ HTTP/1.1" 200 6474 - basehttp
+2022-09-19 16:43:23,138 - INFO - "GET /posts/ HTTP/1.1" 200 6474 - basehttp
+2022-09-19 16:43:23,808 - INFO - "GET /posts/ HTTP/1.1" 200 6474 - basehttp
+2022-09-19 16:43:24,504 - INFO - "GET /posts/ HTTP/1.1" 200 6474 - basehttp
+2022-09-19 16:43:27,220 - INFO - "GET /posts/ HTTP/1.1" 200 6474 - basehttp
+2022-09-19 16:43:27,959 - INFO - "GET /posts/ HTTP/1.1" 200 6474 - basehttp
+2022-09-19 16:43:35,869 - INFO - "GET /posts/18 HTTP/1.1" 200 5397 - basehttp
+2022-09-19 16:43:38,640 - INFO - "GET /posts/18 HTTP/1.1" 200 5397 - basehttp
+2022-09-19 16:43:39,171 - INFO - "GET /posts/18 HTTP/1.1" 200 5397 - basehttp
+2022-09-19 16:43:39,686 - INFO - "GET /posts/18 HTTP/1.1" 200 5397 - basehttp
+2022-09-19 16:43:40,257 - INFO - "GET /posts/18 HTTP/1.1" 200 5397 - basehttp
+2022-09-19 16:44:24,462 - INFO - "GET /posts/18 HTTP/1.1" 200 5397 - basehttp
+2022-09-19 16:44:25,228 - INFO - C:\PythonPro\docker-news\webapp\src\news\views.py changed, reloading. - autoreload
+2022-09-19 16:44:26,116 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:44:26,362 - INFO - "GET /posts/18 HTTP/1.1" 200 5397 - basehttp
+2022-09-19 16:44:32,029 - INFO - "GET /posts/ HTTP/1.1" 200 6474 - basehttp
+2022-09-19 16:44:35,252 - INFO - "GET /posts/108 HTTP/1.1" 200 3393 - basehttp
+2022-09-19 16:45:10,597 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:46:40,690 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:46:42,004 - INFO - hel - views
+2022-09-19 16:46:42,004 - WARNING - helllll - views
+2022-09-19 16:46:42,004 - ERROR - helllll000000000 - views
+2022-09-19 16:46:42,005 - INFO - "GET /posts/ce/ HTTP/1.1" 200 6 - basehttp
+2022-09-19 16:46:43,160 - INFO - hel - views
+2022-09-19 16:46:43,160 - WARNING - helllll - views
+2022-09-19 16:46:43,161 - ERROR - helllll000000000 - views
+2022-09-19 16:46:43,161 - INFO - "GET /posts/ce/ HTTP/1.1" 200 6 - basehttp
+2022-09-19 16:46:44,189 - INFO - hel - views
+2022-09-19 16:46:44,190 - WARNING - helllll - views
+2022-09-19 16:46:44,190 - ERROR - helllll000000000 - views
+2022-09-19 16:46:44,191 - INFO - "GET /posts/ce/ HTTP/1.1" 200 6 - basehttp
+2022-09-19 16:46:44,866 - INFO - hel - views
+2022-09-19 16:46:44,867 - WARNING - helllll - views
+2022-09-19 16:46:44,867 - ERROR - helllll000000000 - views
+2022-09-19 16:46:44,868 - INFO - "GET /posts/ce/ HTTP/1.1" 200 6 - basehttp
+2022-09-19 16:46:45,641 - INFO - hel - views
+2022-09-19 16:46:45,641 - WARNING - helllll - views
+2022-09-19 16:46:45,641 - ERROR - helllll000000000 - views
+2022-09-19 16:46:45,642 - INFO - "GET /posts/ce/ HTTP/1.1" 200 6 - basehttp
+2022-09-19 16:46:46,578 - INFO - hel - views
+2022-09-19 16:46:46,579 - WARNING - helllll - views
+2022-09-19 16:46:46,579 - ERROR - helllll000000000 - views
+2022-09-19 16:46:46,580 - INFO - "GET /posts/ce/ HTTP/1.1" 200 6 - basehttp
+2022-09-19 16:46:47,246 - INFO - hel - views
+2022-09-19 16:46:47,246 - WARNING - helllll - views
+2022-09-19 16:46:47,246 - ERROR - helllll000000000 - views
+2022-09-19 16:46:47,247 - INFO - "GET /posts/ce/ HTTP/1.1" 200 6 - basehttp
+2022-09-19 16:48:24,406 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:48:25,270 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:48:29,965 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:48:30,737 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:48:34,453 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:48:35,324 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:48:38,053 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:48:38,852 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:48:45,652 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:48:46,468 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:49:38,016 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:49:38,787 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:50:03,273 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:52:09,083 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:52:12,707 - INFO - hel - views
+2022-09-19 16:52:12,707 - WARNING - helllll - views
+2022-09-19 16:52:12,707 - ERROR - helllll000000000 - views
+2022-09-19 16:52:12,708 - INFO - "GET /posts/ce/ HTTP/1.1" 200 6 - basehttp
+2022-09-19 16:52:12,708 - INFO - "GET /posts/ce/ HTTP/1.1" 200 6 - basehttp
+2022-09-19 16:52:16,162 - INFO - hel - views
+2022-09-19 16:52:16,162 - WARNING - helllll - views
+2022-09-19 16:52:16,163 - ERROR - helllll000000000 - views
+2022-09-19 16:52:16,169 - INFO - "GET /posts/ce/ HTTP/1.1" 200 6 - basehttp
+2022-09-19 16:52:16,169 - INFO - "GET /posts/ce/ HTTP/1.1" 200 6 - basehttp
+2022-09-19 16:52:54,509 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:52:55,302 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:53:19,801 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:53:20,634 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:53:35,754 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:53:36,643 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:53:51,762 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:53:59,256 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:54:15,332 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:54:16,066 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:55:31,505 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:55:32,286 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 16:57:41,031 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload
+2022-09-19 16:57:41,860 - INFO - Watching for file changes with StatReloader - autoreload
+2022-09-19 17:00:16,302 - INFO - C:\PythonPro\docker-news\webapp\src\project\settings.py changed, reloading. - autoreload

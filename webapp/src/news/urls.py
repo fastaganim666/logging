@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import PostsList, PostDetail, PostCreate, PostUpdate, PostDelete, PostsSearch, PostSubscribe, CView
+from .views import PostsList, PostDetail, PostCreate, PostUpdate, PostDelete, PostsSearch, PostSubscribe, CView, CeView
 from django.views.decorators.cache import cache_page
 
 
@@ -12,4 +12,5 @@ urlpatterns = [
    path('search/', PostsSearch.as_view(), name='post_search'),
    path('subscribe/', PostSubscribe.as_view(), name='post_subscribe'),
    path('celery/', CView.as_view()),
+   path('ce/', CeView.as_view()),
 ]
